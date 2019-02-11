@@ -177,6 +177,62 @@ be installed when needed (via the dependency declaration in the referencing plug
 
     cordova plugin add https://github.com/mmig/mmir-plugins-media.git#master:mmir-plugin-encoder-flac
 
+# DEV
+
+
+## Push Changes To Plugin Repositories
+
+git subtree push --prefix=.vim/bundle/tpope-vim-surround/ durdn-vim-surround master
+
+```
+git subtree push --prefix mmir-plugin-install-assets https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-install-assets.git master
+
+git subtree push --prefix mmir-plugin-asr-google-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-google-xhr.git master
+
+
+git subtree push --prefix mmir-plugin-asr-nuance-ws https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-ws.git master
+
+git subtree push --prefix mmir-plugin-asr-nuance-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-xhr.git master
+
+
+git subtree push --prefix mmir-plugin-encoder-flac https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-flac.git master
+
+git subtree push --prefix mmir-plugin-encoder-amr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git master
+
+git subtree push --prefix mmir-plugin-encoder-core https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-core.git master
+
+
+git subtree push --prefix mmir-plugin-tts-nuance-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-tts-nuance-xhr.git master
+
+git subtree push --prefix mmir-plugin-tts-speakjs https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-tts-speakjs.git master
+
+```
+
+## Included Plugin Repositories
+
+```
+git subtree add --prefix mmir-plugin-install-assets http://gitlab-cos.b.dfki.de/mmir/mmir-plugin-install-assets.git master --squash
+
+git subtree add --prefix mmir-plugin-asr-google-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-google-xhr.git master --squash
+
+
+git subtree add --prefix mmir-plugin-asr-nuance-ws https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-ws.git master --squash
+
+git subtree add --prefix mmir-plugin-asr-nuance-ws-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-xhr.git master --squash
+
+
+git subtree add --prefix mmir-plugin-encoder-flac https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-flac.git master --squash
+
+git subtree add --prefix mmir-plugin-encoder-amr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git master --squash
+
+git subtree add --prefix mmir-plugin-encoder-core https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-core.git master --squash
+
+
+git subtree add --prefix mmir-plugin-tts-nuance-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-tts-nuance-xhr.git master --squash
+
+git subtree add --prefix mmir-plugin-tts-speakjs https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-tts-speakjs.git master --squash
+
+```
 
 [1]: https://github.com/mmig/mmir/wiki/3.9.2-Speech-Processing-in-MMIR#speech-modules
 [2]: https://docs.npmjs.com/files/package.json
