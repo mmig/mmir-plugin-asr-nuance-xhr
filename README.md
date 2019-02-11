@@ -218,7 +218,7 @@ git subtree add --prefix mmir-plugin-asr-google-xhr https://gitlab-cos.b.dfki.de
 
 git subtree add --prefix mmir-plugin-asr-nuance-ws https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-ws.git master --squash
 
-git subtree add --prefix mmir-plugin-asr-nuance-ws-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-xhr.git master --squash
+git subtree add --prefix mmir-plugin-asr-nuance-xhr https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-xhr.git master --squash
 
 
 git subtree add --prefix mmir-plugin-encoder-flac https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-flac.git master --squash
