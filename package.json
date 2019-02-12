@@ -23,10 +23,10 @@
   "author": "russa",
   "license": "MIT",
   "dependencies": {
-    "mmir-plugin-encoder-amr": "file:../mmir-plugin-encoder-amr"
+    "mmir-plugin-encoder-amr": "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git"
   },
   "peerDependencies": {
-    "mmir": "https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
+    "mmir": "git+https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
   },
   "cordova": {
     "id": "mmir-plugin-asr-nuance-web",
@@ -34,7 +34,7 @@
   },
   "engines": {
     "cordovaDependencies": {
-      "1.0.0": { "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git": ">=1.0.0"}
+      "1.0.0": { "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git": ">=1.0.0"}
     }
   }
 }
