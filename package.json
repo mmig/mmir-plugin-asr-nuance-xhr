@@ -34,7 +34,9 @@
   },
   "engines": {
     "cordovaDependencies": {
-      "1.0.0": { "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git": ">=1.0.0"}
+      "1.0.0": {
+        "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git": ">=1.0.0"
+      }
     }
   }
 }
