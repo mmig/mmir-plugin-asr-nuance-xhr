@@ -1,36 +1,40 @@
 {
-  "name": "mmir-plugin-asr-nuance-web",
-  "version": "0.4.0",
-  "description": "\r\n      Cordova plugin for the MMIR framework that allows Automatic Speech Recognition (ASR) via Nuance web services\r\n    ",
+  "name": "mmir-plugin-asr-nuance-xhr",
+  "version": "1.0.0",
+  "description": "Cordova plugin for the MMIR framework that allows Automatic Speech Recognition (ASR) via Nuance web services",
+  "main": "./www/webasrNuanceImpl.js",
+  "directories": {
+    "lib": "./www"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-asr-nuance-xhr.git"
+  },
+  "keywords": [
+    "asr",
+    "speech",
+    "recognition",
+    "nuance",
+    "xhr"
+  ],
+  "author": "russa",
+  "license": "MIT",
+  "dependencies": {
+    "mmir-plugin-encoder-amr": "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git"
+  },
+  "peerDependencies": {
+    "mmir": "https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
+  },
   "cordova": {
     "id": "mmir-plugin-asr-nuance-web",
     "platforms": []
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mmig/mmir-plugins-media.git#master:mmir-plugin-asr-nuance-web"
-  },
-  "keywords": [
-    "cordova",
-    "speech",
-    "asr",
-    "recognition",
-    "ecosystem:cordova"
-  ],
   "engines": {
-    "cordova": ">=5.0",
-    "npm": ">=2.0"
-  },
-  "dependencies": {
-	  "mmir-plugin-encoder-amr": "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git"
-  },
-  "peerDependencies": {
-	  "mmir": "https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
-  },
-  "author": "russa, DFKI",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmig/mmir-plugins-media/issues"
-  },
-  "homepage": "https://github.com/mmig/mmir-plugins-media/tree/master%3Ammir-plugin-asr-nuance-web#readme"
+    "cordovaDependencies": {
+      "1.0.0": { "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git": ">=1.0.0"}
+    }
+  }
 }
