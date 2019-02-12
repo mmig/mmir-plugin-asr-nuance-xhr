@@ -29,7 +29,7 @@
     "mmir": "git+https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack.git"
   },
   "cordova": {
-    "id": "mmir-plugin-asr-nuance-web",
+    "id": "mmir-plugin-asr-nuance-xhr",
     "platforms": []
   },
   "engines": {
