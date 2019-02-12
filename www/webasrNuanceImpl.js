@@ -1,4 +1,4 @@
-﻿
+
 /**
  * Media Module: Implementation for Speech Recognition via Nuance ASR over HTTPS/POST
  *
