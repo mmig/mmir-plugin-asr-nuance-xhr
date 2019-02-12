@@ -26,7 +26,7 @@
     "mmir-plugin-encoder-amr": "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git"
   },
   "peerDependencies": {
-    "mmir": "git+https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
+    "mmir": "git+https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack.git"
   },
   "cordova": {
     "id": "mmir-plugin-asr-nuance-web",
