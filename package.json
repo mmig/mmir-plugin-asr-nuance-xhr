@@ -23,7 +23,7 @@
   "author": "russa",
   "license": "MIT",
   "dependencies": {
-    "mmir-plugin-encoder-amr": "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git"
+    "mmir-plugin-encoder-amr": "file:../mmir-plugin-encoder-amr"
   },
   "peerDependencies": {
     "mmir": "https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
