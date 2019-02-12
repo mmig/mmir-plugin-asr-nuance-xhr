@@ -11,10 +11,6 @@
 
 define(['mmirf/mediaManager', 'mmirf/configurationManager', 'mmirf/languageManager', 'mmirf/util/loadFile'], function(mediaManager, config, lang, ajax){
 
-	if(typeof WEBPACK_BUILD !== 'undefined' && WEBPACK_BUILD){
-		require.resolve('mmir-plugin-encoder-amr');
-	}
-
 	/**  @memberOf NuanceWebAudioInputImpl# */
 	var MODE = 'nuance';
 
