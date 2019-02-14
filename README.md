@@ -17,25 +17,24 @@ Cordova plugin for the MMIR framework that allows Automatic Speech Recognition (
 
 ...
 
-	"nuanceWebAudioInput": {
+	"asrNuanceXhr": {
 		"encoder": "amr",
 		"appId": <the app ID>,
-		"appKey": <the secret app key>,
-		"baseUrl": "https://dictation.nuancemobility.net/NMDPAsrCmdServlet/dictation"
+		"appKey": <the secret app key>
 	},
-	
+
 	....
-	
+
 	"mediaManager": {
     	"plugins": {
     		"browser": [
     			...
-                {"mod": "webAudioTextToSpeech", "config": "webttsNuanceImpl"},
+                {"mod": "webAudioTextToSpeech", "config": "webasrNuanceImpl"},
                 ...
     		],
     		"cordova": [
     			...
-                {"mod": "webAudioTextToSpeech", "config": "webttsNuanceImpl"},
+                {"mod": "webAudioTextToSpeech", "config": "webasrNuanceImpl"},
                 ...
     		]
     	}
@@ -55,7 +54,6 @@ supported options for recoginze() / startRecord():
 supported custom options for recoginze() / startRecord():
  * appKey: String
  * appId: String
- * codec: 'amr' | 'wav'
  * source: "SpeakerAndMicrophone" | "HeadsetInOut" | "HeadsetBT" | "HeadPhone" | "LineOut"  
           source: Indicates the source of the audio recording.  
 		  Properly specifying this header improves recognition accuracy.  

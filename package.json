@@ -6,6 +6,7 @@
   "directories": {
     "lib": "./www"
   },
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pluginexport"
@@ -27,7 +28,7 @@
     "mmir-plugin-encoder-amr": "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git"
   },
   "peerDependencies": {
-    "mmir": "git+https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack.git"
+    "mmir-lib": "git+https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
   },
   "cordova": {
     "id": "mmir-plugin-asr-nuance-xhr",
