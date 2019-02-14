@@ -15,7 +15,7 @@ define(['mmirf/mediaManager', 'mmirf/configurationManager', 'mmirf/languageManag
 	var MODE = 'nuance';
 
 	/**  @memberOf NuanceWebAudioInputImpl# */
-	var _pluginName = 'nuanceWebAudioInput';
+	var _pluginName = 'asrNuanceXhr';
 
 	/** @memberOf NuanceWebAudioInputImpl# */
 	var result_types = {
@@ -207,19 +207,68 @@ define(['mmirf/mediaManager', 'mmirf/configurationManager', 'mmirf/languageManag
 
 		var apiLang = getFixedLang(currentOptions);
 
-		var appKey = currentOptions.appKey? currentOptions.appKey : config.getString( [_pluginName, "appKey"] );
-		var appId = currentOptions.appId? currentOptions.appId : config.getString( [_pluginName, "appId"] );
+		var appKey = currentOptions.appKey || config.getString( [_pluginName, "appKey"] );
+		var appId = currentOptions.appId || config.getString( [_pluginName, "appId"] );
+		var userId = currentOptions.userId || config.getString( [_pluginName, "userId"] );
 		var baseUrl = "https://dictation.nuancemobility.net/NMDPAsrCmdServlet/dictation";
+
+		var headers = {
+			'Content-Type': 'audio/amr',//TODO support settings!
+			'Accept': 'text/plain',			//NOTE cannot use jQuery option dataType='text', since jQuery automatically adds some Accept-entries which will result in an error-response
+			'Accept-Language': apiLang
+			//OPTIONAL 'Accept-Topic': ["Dictation" | "WebSearch" | "DTV-Search"]
+			//OPTIONAL 'X-Dictation-NBestListSize': <number-string> //request to return first/best 1-10 results
+		};
+
+		// 'search' | 'dictation'
+		var mode = currentOptions.mode || config.getString( [_pluginName, "mode"] );
+		if(mode){
+			if(mode === 'search'){
+				mode = 'WebSearch';
+			} else if(mode === 'dictation'){
+				mode = 'Dictation';
+			} else if(mode === 'DTV-Search'){
+				mode = 'DTV-Search';
+			} else {
+				console.error('Unknown option for mode: "'+mode+'", ignoring mode-option...');
+				mode = void(0);
+			}
+
+			if(mode){
+				headers['Accept-Topic'] = mode;
+			}
+		}
+
+		//integer [1, 10]
+		var resultsCount = currentOptions.results || config.getString( [_pluginName, "results"] );
+		if(resultsCount){
+			var num = parseInt(resultsCount, 10);
+			if(isFinite(num) && num > 0){
+
+				if(num > 10){
+					console.warn('Invalid option for results: must be integer between 1 and 10 -> setting to 10');
+					num = 10;
+				}
+
+				headers['X-Dictation-NBestListSize'] = num.toFixed(0);
+
+			} else {
+				console.error('Invalid option for results (must be an integer): ' +  resultsCount);
+			}
+		}
+
+		// 'SpeakerAndMicrophone' | 'HeadsetInOut' | 'HeadsetBT' | 'HeadPhone' | 'LineOut'
+		var source = currentOptions.source || config.getString( [_pluginName, "source"] );
+		if(source){
+			headers['X-Dictation-AudioSource'] = source;
+		}
+
 
 		//TODO support more options / custom options
 		var options = {
-			url: baseUrl+"?appId="+appId+"&appKey="+appKey,
+			url: baseUrl+"?appId="+appId+"&appKey="+appKey+(userId? "&id="+userId : ""),
 			type: 'POST',
-			headers: {
-				'Content-Type': 'audio/amr',
-				'Accept': 'text/plain',			//NOTE cannot use jQuery option dataType='text', since jQuery automatically adds some Accept-entries which will result in an error-response
-				'Accept-Language': apiLang
-			},
+			headers: headers,
 			processData: false,					//prevent jQuery from trying to process the (binary) data
 			data: data,
 			mmirSendType: 'binary',				//add custom "marker" to signify that we are sending binary data
