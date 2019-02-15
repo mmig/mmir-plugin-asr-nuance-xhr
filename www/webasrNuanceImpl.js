@@ -178,7 +178,7 @@ define(['mmirf/mediaManager', 'mmirf/configurationManager', 'mmirf/languageManag
 					}
 				}
 
-				type = lastBlob? result_types.FINAL : result_types.INTERMEDIATE;
+				var type = lastBlob? result_types.FINAL : result_types.INTERMEDIATE;
 
 				successCallback(respText[0],1,type,altRes);
 			}
