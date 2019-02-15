@@ -1,4 +1,6 @@
 
+import { MediaManagerPluginEntry } from 'mmir-plugin-encoder-core';
+
 /**
  * (optional) entry "asrNuanceXhr" in main configuration.json
  * for settings of webasrNuanceImpl module.
@@ -12,7 +14,7 @@ export interface ASRNuanceXHRConfigEntry {
   asrNuanceXhr?: ASRNuanceXHRConfig;
 }
 
-export interface ASRNuanceXHRConfig {
+export interface ASRNuanceXHRConfig extends MediaManagerPluginEntry {
   /** OPTIONAL
    * @default "amr" (see mmir-plugin-encoder-core) */
   encoder?: 'amr'; // TODO (re-enable) 'wav', (enable) 'speex'
@@ -38,4 +40,8 @@ export interface ASRNuanceXHRConfig {
   //        /*'speex': */  8000 | 'nw' | 11025 | 'sw' | 16000 | 'wb';
   // /** (TODO?) NOT IMPLEMENTED / CONFIGURABLE (using const "https://dictation.nuancemobility.net/NMDPAsrCmdServlet/dictation") */
   // baseUrl: string;
+}
+
+export enum RemoteUrls {
+  baseUrl = 'https://dictation.nuancemobility.net'
 }
