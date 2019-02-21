@@ -8,8 +8,7 @@
   },
   "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pluginexport"
+    "build": "createplugincompat ./ && pluginexport ./"
   },
   "repository": {
     "type": "git",
@@ -39,6 +38,11 @@
       "1.0.0": {
         "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr.git": ">=1.0.0"
       }
+    }
+  },
+  "mmir": {
+    "compat": {
+      "./www/webasrNuanceImpl.js": {"file": "./www/alt/webasrNuanceImplCompat.js", "type": "asr"}
     }
   },
   "devDependencies": {

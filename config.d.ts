@@ -10,11 +10,11 @@ import { MediaManagerPluginEntry } from 'mmir-lib';
  * {@link MediaManagerWebInput#recognize} or {@link MediaManagerWebInput#startRecord}
  * (if specified via the options, values will override configuration settings).
  */
-export interface ASRNuanceXHRConfigEntry {
-  asrNuanceXhr?: ASRNuanceXHRConfig;
+export interface PluginConfig {
+  asrNuanceXhr?: PluginConfigEntry;
 }
 
-export interface ASRNuanceXHRConfig extends MediaManagerPluginEntry {
+export interface PluginConfigEntry extends MediaManagerPluginEntry {
   /** OPTIONAL
    * @default "amr" (see mmir-plugin-encoder-core) */
   encoder?: 'amr'; // TODO (re-enable) 'wav', (enable) 'speex'

@@ -3,11 +3,11 @@ export * from './config';
 
 /// <reference types="mmir-lib" />
 import { ASROnStatus, ASROnError, ASRMode } from 'mmir-lib';
-import { MediaManagerWebInput, ASREncoderOptions } from 'mmir-plugin-encoder-core';
+import { PluginMediaManager as MediaManagerWebInput, ASREncoderOptions } from 'mmir-plugin-encoder-core';
 
 declare type NuanceASRMode = /* custom Nuance-specific: */ 'DTV-Search';
 
-declare interface ASRNuanceXHROptions extends ASREncoderOptions {
+declare interface PluginASROptions extends ASREncoderOptions {
   /**
    * [supported option]
    * set language/country for ASR
@@ -47,8 +47,8 @@ declare interface ASRNuanceXHROptions extends ASREncoderOptions {
   // codec: 'amr' | 'wav' NOT SUPPORTED via options
 }
 
-declare interface MediaManagerASRNuanceXHR extends MediaManagerWebInput {
-  recognize: (options?: ASRNuanceXHROptions, statusCallback?: ASROnStatus, failureCallback?: ASROnError, isIntermediateResults?: boolean) => void;
-  startRecord: (options?: ASRNuanceXHROptions, successCallback?: ASROnStatus, failureCallback?: ASROnError, intermediateResults?: boolean) => void;
-  stopRecord: (options?: ASRNuanceXHROptions, successCallback?: ASROnStatus, failureCallback?: ASROnError) => void;
+declare interface PluginMediaManager extends MediaManagerWebInput {
+  recognize: (options?: PluginASROptions, statusCallback?: ASROnStatus, failureCallback?: ASROnError, isIntermediateResults?: boolean) => void;
+  startRecord: (options?: PluginASROptions, successCallback?: ASROnStatus, failureCallback?: ASROnError, intermediateResults?: boolean) => void;
+  stopRecord: (options?: PluginASROptions, successCallback?: ASROnStatus, failureCallback?: ASROnError) => void;
 }
