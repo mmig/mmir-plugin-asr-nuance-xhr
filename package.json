@@ -42,7 +42,10 @@
   },
   "mmir": {
     "compat": {
-      "./www/webasrNuanceImpl.js": {"file": "./www/alt/webasrNuanceImplCompat.js", "type": "asr"}
+      "./www/webasrNuanceImpl.js": {
+        "file": "./www/alt/webasrNuanceImplCompat.js",
+        "type": "asr"
+      }
     }
   },
   "devDependencies": {

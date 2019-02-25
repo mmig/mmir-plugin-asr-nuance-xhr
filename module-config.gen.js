@@ -24,10 +24,18 @@ module.exports = {
     "appKey",
     /** credentials application ID (MUST be set via configuration or options) */
     "appId",
-    /** OPTIONAL
-     * @default "amr" (see mmir-plugin-encoder-core) */
-    "encoder"
+    /** OPTIONAL (see mmir-plugin-encoder-core)
+     * @default "amr" */
+    "encoder",
+    /** the plugin/module which which will load/use this specific ASR implementation
+     * @default mmir-plugin-encoder-core.js
+     */
+    "mod"
   ],
+  defaultValues: {
+    encoder: "amr",
+    mod: "mmir-plugin-encoder-core.js"
+  },
   remoteUrls: {
     baseUrl: "https://dictation.nuancemobility.net"
   }
