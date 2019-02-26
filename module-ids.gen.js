@@ -6,9 +6,9 @@
 
 var _id = "mmir-plugin-asr-nuance-xhr";
 var _paths = {
-  "mmir-plugin-asr-nuance-xhr/webasrNuanceImpl": "www/webasrNuanceImpl.js",
-  "mmir-plugin-asr-nuance-xhr/webasrNuanceImplCompat": "www/alt/webasrNuanceImplCompat.js",
-  "mmir-plugin-asr-nuance-xhr": "www/webasrNuanceImpl.js"
+  "mmir-plugin-asr-nuance-xhr/asrNuanceXhr": "www/asrNuanceXhr.js",
+  "mmir-plugin-asr-nuance-xhr/asrNuanceXhrCompat": "www/alt/asrNuanceXhrCompat.js",
+  "mmir-plugin-asr-nuance-xhr": "www/asrNuanceXhr.js"
 };
 var _workers = [];
 var _exportedModules = [

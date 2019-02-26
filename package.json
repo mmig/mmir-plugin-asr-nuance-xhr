@@ -2,7 +2,7 @@
   "name": "mmir-plugin-asr-nuance-xhr",
   "version": "1.0.0",
   "description": "Cordova plugin for the MMIR framework that allows Automatic Speech Recognition (ASR) via Nuance web services",
-  "main": "./www/webasrNuanceImpl.js",
+  "main": "./www/asrNuanceXhr.js",
   "directories": {
     "lib": "./www"
   },
@@ -42,8 +42,8 @@
   },
   "mmir": {
     "compat": {
-      "./www/webasrNuanceImpl.js": {
-        "file": "./www/alt/webasrNuanceImplCompat.js",
+      "./www/asrNuanceXhr.js": {
+        "file": "./www/alt/asrNuanceXhrCompat.js",
         "type": "asr"
       }
     }

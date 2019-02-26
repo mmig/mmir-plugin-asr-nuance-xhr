@@ -29,12 +29,12 @@ Cordova plugin for the MMIR framework that allows Automatic Speech Recognition (
     	"plugins": {
     		"browser": [
     			...
-                {"mod": "webAudioTextToSpeech", "config": "webasrNuanceImpl"},
+                {"mod": "webAudioInput", "config": "asrNuanceXhr"},
                 ...
     		],
     		"cordova": [
     			...
-                {"mod": "webAudioTextToSpeech", "config": "webasrNuanceImpl"},
+                {"mod": "webAudioInput", "config": "asrNuanceXhr"},
                 ...
     		]
     	}

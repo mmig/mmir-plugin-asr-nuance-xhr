@@ -22,7 +22,7 @@
 
     <!-- ASR plugin implementation for integration into MMIR framework  -->
     <asset
-        src="www/webasrNuanceImpl.js"
-        target="mmirf/env/media/webasrNuanceImpl.js" />
+        src="www/asrNuanceXhr.js"
+        target="mmirf/env/media/asrNuanceXhr.js" />
 
 </plugin>
