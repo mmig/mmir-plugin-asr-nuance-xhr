@@ -27,6 +27,11 @@ module.exports = {
     /** OPTIONAL (see mmir-plugin-encoder-core)
      * @default "amr" */
     "encoder",
+    /**
+     * the plugin type
+     * @default "asr"
+     */
+    "type",
     /** the plugin/module which which will load/use this specific ASR implementation
      * @default mmir-plugin-encoder-core.js
      */
@@ -34,6 +39,7 @@ module.exports = {
   ],
   defaultValues: {
     encoder: "amr",
+    type: "asr",
     mod: "mmir-plugin-encoder-core.js"
   },
   remoteUrls: {

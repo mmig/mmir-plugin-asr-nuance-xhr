@@ -22,6 +22,11 @@ export interface PluginConfigEntry extends MediaManagerPluginEntry {
    * @default mmir-plugin-encoder-core.js
    */
   mod: 'mmir-plugin-encoder-core.js';
+  /**
+   * the plugin type
+   * @default "asr"
+   */
+  type: 'asr';
 
   /** OPTIONAL (see mmir-plugin-encoder-core)
    * @default "amr" */
