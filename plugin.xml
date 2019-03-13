@@ -18,7 +18,11 @@
         <engine name="cordova" version=">=5.0" />
     </engines>
 
-	<dependency id="mmir-plugin-encoder-amr" url="https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr" commit="master" />
+    <!-- MMIR_PLUGIN_MODE: "normal" | "compat" | "webpack" -->
+    <preference name="MMIR_PLUGIN_MODE" default="normal" />
+    <hook src="res/js/before_plugin_install_hook.js" type="before_plugin_install" />
+
+    <dependency id="mmir-plugin-encoder-amr" url="https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-amr" commit="master" />
 
     <!-- ASR plugin implementation for integration into MMIR framework  -->
     <asset
