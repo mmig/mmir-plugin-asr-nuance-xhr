@@ -1,4 +1,4 @@
-# mmir-plugin-asr-nuance-web
+# mmir-plugin-asr-nuance-xhr
 
 Cordova plugin for the MMIR framework that allows Automatic Speech Recognition (ASR) via Nuance web services
 
