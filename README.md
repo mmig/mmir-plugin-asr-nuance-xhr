@@ -1,5 +1,20 @@
 # mmir-plugin-asr-nuance-xhr
 
+----
+----
+
+<h1 style="color: red;">
+DEPRECATED this plugin is outdated since Nuance SpeechKit service is discontinued, for a current alternative see <a href="https://github.com/mmig/mmir-plugin-asr-cerence-ws">mmir-plugin-asr-cerence-ws</a>
+</h1>
+
+```diff
+- DEPRECATED Nuance SpeechKit service is discontinued
+- for current alternative see [mmir-plugin-asr-cerence-ws](https://github.com/mmig/mmir-plugin-asr-cerence-ws) based on the Cerence WebSocket API
+```
+
+----
+----
+
 Cordova plugin for the MMIR framework that allows Automatic Speech Recognition (ASR) via Nuance web services
 
 ## configure CSP
