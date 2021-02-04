@@ -8,7 +8,9 @@
   },
   "types": "index.d.ts",
   "scripts": {
-    "build": "createplugincompat ./ && pluginexport ./"
+    "build": "createplugincompat ./ && pluginexport ./",
+    "update:version": "updateversion ./",
+    "update:res": "copycordovascripts res/js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,7 @@
     "mmir-plugin-encoder-amr": "git+https://github.com/mmig/mmir-plugin-encoder-amr.git"
   },
   "peerDependencies": {
-    "mmir-lib": "git+https://github.com/mmig/mmir-lib.git"
+    "mmir-lib": ">=5"
   },
   "cordova": {
     "id": "mmir-plugin-asr-nuance-xhr",
@@ -49,6 +51,7 @@
     }
   },
   "devDependencies": {
-    "mmir-plugin-exports": "git+https://github.com/mmig/mmir-plugin-exports.git"
+    "mmir-lib": "^6.2.0",
+    "mmir-plugin-exports": "^2.4.0"
   }
 }
